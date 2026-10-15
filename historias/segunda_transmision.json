@@ -1,0 +1,63 @@
+{
+  "titulo": "La segunda transmisión",
+  "inicio": "A1",
+  "variables": {
+    "tiene_grabacion": false
+  },
+  "escenas": [
+    {
+      "id": "A1",
+      "texto": "Son las 03:40. Llega una segunda señal desde la estación Aurora: una grabación breve que quizá contenga una clave de acceso.",
+      "final": false,
+      "opciones": [
+        {
+          "id": "escuchar",
+          "texto": "Escuchar la grabación",
+          "destino": "A2",
+          "condiciones": {},
+          "efectos": {"tiene_grabacion": true}
+        },
+        {
+          "id": "ignorar",
+          "texto": "Ignorar la grabación",
+          "destino": "A2",
+          "condiciones": {},
+          "efectos": {}
+        }
+      ]
+    },
+    {
+      "id": "A2",
+      "texto": "La señal pide abrir la compuerta de la estación a distancia. La operadora debe decidir cómo hacerlo.",
+      "final": false,
+      "opciones": [
+        {
+          "id": "abrir_con_clave",
+          "texto": "Abrir con la clave de la grabación",
+          "destino": "A3",
+          "condiciones": {"tiene_grabacion": true},
+          "efectos": {}
+        },
+        {
+          "id": "forzar_compuerta",
+          "texto": "Forzar la compuerta",
+          "destino": "A4",
+          "condiciones": {"tiene_grabacion": false},
+          "efectos": {}
+        }
+      ]
+    },
+    {
+      "id": "A3",
+      "texto": "La clave es correcta. La compuerta se abre y el equipo encuentra la bitácora completa de la estación.",
+      "final": true,
+      "opciones": []
+    },
+    {
+      "id": "A4",
+      "texto": "La compuerta cede, pero el sistema se bloquea. La estación vuelve a quedar en silencio.",
+      "final": true,
+      "opciones": []
+    }
+  ]
+}
