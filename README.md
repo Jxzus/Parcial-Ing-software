@@ -1,6 +1,6 @@
 # La última transmisión — Motor de historias interactivas (versión 1)
 
-**Integrantes:** _(escribir nombres completos de ambos)_  
+**Integrantes:** Jesus Andres Perez Fuentes y Juan Francisco De Avila Alfaro
 **Curso:** Ingeniería de Software — Parcial práctico
 
 ## Requisitos
